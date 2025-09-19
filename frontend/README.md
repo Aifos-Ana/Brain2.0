@@ -1,69 +1,82 @@
-# React + TypeScript + Vite
+# Brain2.0 Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Brain2.0 — Your Personal OS
 
-Currently, two official plugins are available:
+> Frontend of the web application for personal finance and productivity management. Responsible for providing a modern, responsive, and interactive UI that consumes the backend API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🧩 Tech Stack
 
-## Expanding the ESLint configuration
+- **React + TypeScript** – Modern, type-safe frontend
+- **TailwindCSS** – Fast and responsive styling
+- **React Router DOM** – Page navigation
+- **Zustand** – Lightweight state management
+- **Axios** – Backend communication
+- **Vite** – Fast build tool
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### ⚙️ Key Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Authentication:** Login/Register via JWT
+- **Interactive Dashboard** with charts and statistics
+- **CRUD** for Expenses and Incomes
+- **CRUD** for Tasks/Habits
+- **Dark/Light** Mode
+- **Export reports** (CSV/PDF)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Project Setup
+1. Clone the repository
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Aifos-Ana/Brain2.0.git
+cd frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Project Structure
+
+```bash
+frontend/
+├─ src/
+│  ├─ api/          # Axios instance
+│  ├─ components/   # Buttons, inputs, navbar
+│  ├─ pages/        # Login, Dashboard, Expenses, Tasks
+│  ├─ store/        # Zustand store
+│  └─ App.tsx       # Router and entry point
+├─ package.json
+├─ tailwind.config.cjs
+└─ postcss.config.cjs
+```
+
+4. Run the Frontend
+
+```bash
+npm run dev
+```
+The frontend runs at `http://localhost:5173` by default (Vite).
+
+## 🧪 Testing
+
+- Frontend tests: React Testing Library + Cypress (unit and E2E tests)
+
+```bash
+npm run test
+```
+
+## ⚡ Useful Commands
+
+`npm run dev` → Start development server
+
+`npm run build` → Build for production
+
+`npm run preview` → Preview production build
+
+## 🔗 Next Steps
+
+- [ ] Connect all CRUD routes to the backend via Axios
+- [ ] Add interactive charts and dashboard components (Chart.js or Recharts)
+- [ ] Improve UX/UI with dark/light mode and responsive design
+- [ ] Add unit and E2E tests for all pages
