@@ -1,13 +1,12 @@
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+import Layout from "../components/Layout"; 
 
 function Login() {
   return (
-    <div>
-        <Navbar />
-        Login
-        <Footer />
-    </div>
+    <Layout>
+      <main>
+        <h1>Login</h1>
+      </main>
+    </Layout>
   )
 }
 

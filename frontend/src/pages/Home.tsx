@@ -1,14 +1,13 @@
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Layout from "../components/Layout"; 
 
 function Home() {
   return (
-    <div>
-        <Navbar />
-        <h1>Wellcome to your Personal OS</h1>
-        <Footer />
-    </div>
-  )
+    <Layout>
+      <div className="flex-grow container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold">Welcome to your Personal OS</h1>
+      </div>
+    </Layout>
+  );
 }
 
-export default Home
+export default Home;

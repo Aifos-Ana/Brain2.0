@@ -1,13 +1,12 @@
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+import Layout from "../components/Layout"; 
 
 function Dashboard() {
   return (
-    <div>
-        <Navbar />
-        Dashboard
-        <Footer />
-    </div>
+    <Layout>
+      <div>
+        <h1>My dashboard</h1>
+      </div>
+    </Layout>
   )
 }
 
